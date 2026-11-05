@@ -1,14 +1,12 @@
 /* eslint-disable @next/next/no-img-element, react/no-unescaped-entities */
 /*
- * DRAFT — research-backed copy awaiting editorial approval.
+ * Published. Research-backed copy; open verification items are tracked in SALESFORCE_PRM_EDITORIAL_REVIEW.md.
  * - Reuses the approved PartnerStack page's CSS module and reading-progress component.
- * - Product selection (10 of 12 candidates) approved by the team; copy still needs editorial review.
- * - Kept out of search indexing, the Alternatives gallery and the footer until reviewed.
+ * - Product selection: 10 of 12 candidates, approved by the team.
  */
 import type { Metadata } from "next";
 import { ArticleBreadcrumb, ArticleMetadata } from "@/components/alternatives/article-editorial";
 import { salesforceGuide } from "@/data/alternatives";
-import { NOINDEX_ROBOTS } from "@/lib/seo";
 import styles from "../partnerstack-alternatives/page.module.css";
 import { GridBackground } from "@/components/layout/grid-background";
 import { Header } from "@/components/layout/header";
@@ -24,7 +22,6 @@ export const metadata: Metadata = {
     "Compare ten alternatives to Salesforce PRM by features, best fit, and what you can expect to pay, so you can choose a partner platform that fits your program and your CRM.",
   openGraph: { title: "Best Salesforce PRM Alternatives in 2026 | JazzHQ", url: PATH, type: "article" },
   alternates: { canonical: PATH },
-  robots: NOINDEX_ROBOTS,
 };
 
 const imageDimensions: Record<string, readonly [number, number]> = {

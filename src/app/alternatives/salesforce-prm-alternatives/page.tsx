@@ -7,6 +7,7 @@
 import type { Metadata } from "next";
 import { ArticleBreadcrumb, ArticleMetadata } from "@/components/alternatives/article-editorial";
 import { salesforceGuide } from "@/data/alternatives";
+import { NOINDEX_ROBOTS } from "@/lib/seo";
 import styles from "../partnerstack-alternatives/page.module.css";
 import { GridBackground } from "@/components/layout/grid-background";
 import { Header } from "@/components/layout/header";
@@ -22,6 +23,8 @@ export const metadata: Metadata = {
     "Compare ten alternatives to Salesforce PRM by features, best fit, and what you can expect to pay, so you can choose a partner platform that fits your program and your CRM.",
   openGraph: { title: "Best Salesforce PRM Alternatives in 2026 | JazzHQ", url: PATH, type: "article" },
   alternates: { canonical: PATH },
+  // Held back from indexing until the factual claims in SALESFORCE_PRM_EDITORIAL_REVIEW.md are approved.
+  robots: NOINDEX_ROBOTS,
 };
 
 const imageDimensions: Record<string, readonly [number, number]> = {
@@ -123,7 +126,7 @@ const tools: Tool[] = [
       "Essentials is $1,500/month and Advanced is $3,000/month. Unlimited is contact-sales only.",
       "Annual pricing is available on request, and month-to-month billing carries a 10% surcharge.",
       "No setup or onboarding fees, and standard implementation is included.",
-      "The plan cards say 'Try for 1 month,' but the FAQ says free trials aren't offered, so confirm trial terms with Magentrix.",
+      "The Essentials and Advanced plan cards say 'Try for 1 month,' but the FAQ says free trials aren't offered and that a trial on request may carry a fee, so confirm trial terms with Magentrix.",
     ],
     image: "/buyers-guide/salesforce-prm/magentrix.webp",
     imageAlt: "Magentrix homepage hero reading The Data Foundation for Channel Sales, with a graphic of CRM records mirrored in Magentrix PRM",
@@ -155,12 +158,12 @@ const tools: Tool[] = [
     considerations: [
       "Commission payouts run through Stripe or manual triggers rather than a native payout engine.",
       "Integration breadth is narrower for complex stacks.",
-      "The Core plan caps at 50 partners, so larger programs need to move to a quote-based Plus plan.",
+      "The Core plan covers up to 50 active partners, so larger programs need to move to a quote-based Plus plan.",
     ],
     pricing: [
-      "There is a 14-day free trial.",
-      "The Core plan starts at $399/month for up to 25 partners (scales with active partners, capped at 50).",
-      "Plus and Premier plans are quote-based.",
+      "Kiflo's pricing page says a trial or proof of concept is available to validate specific parts of the product, without stating a length. Kiflo's compare pages and FAQ have described a 14-day trial offered after a demo, so confirm current terms with Kiflo.",
+      "The Core plan starts at $399/month and covers up to 50 active partners, with price scaling by active partner count.",
+      "Plus and Premier plans are quote-based, starting at 25 partners and scaling to unlimited.",
     ],
     image: "/buyers-guide/partnerstack/kiflo.png",
     imageAlt: "Kiflo partner revenue platform",
@@ -171,7 +174,7 @@ const tools: Tool[] = [
     name: "Euler",
     label: "Best for AI-driven partner operations",
     bestFor:
-      "Euler is best for partner and channel teams that want AI agents to take on deal registration, partner operations, and partner account management, and that run HubSpot as their CRM.",
+      "Euler is best for partner and channel teams that want AI agents to take on deal registration, partner operations, and partner account management, and that run HubSpot or Salesforce as their CRM.",
     intro: [
       "Euler describes itself as an AI-native, agentic PRM. Instead of giving partners a portal and leaving your team to run it, it uses AI agents to handle work like deal registration, partner operations, and partner account management.",
       "That makes it a different kind of alternative to Salesforce PRM. It is less about extending a CRM with a portal and more about reducing the manual partner work that sits behind one. Its website also includes a customer testimonial describing a move away from Salesforce PRM.",
@@ -191,7 +194,7 @@ const tools: Tool[] = [
     considerationsLabel: "Things to consider",
     considerations: [
       "Pricing and free-trial details aren't published. The website points to a demo.",
-      "Euler's website names HubSpot as its CRM integration. Confirm Salesforce support and depth before shortlisting if you are staying on Salesforce.",
+      "Euler's integrations page lists Salesforce, HubSpot, and Pipedrive, and says it syncs partners, opportunities, and attribution data with Salesforce. Its homepage names only HubSpot, so confirm how deep the Salesforce sync goes (for example, custom objects) if you are staying on Salesforce.",
       "Customer results on its website (such as 4x partner-sourced revenue growth) are self-reported.",
     ],
     pricing: ["Pricing isn't publicly listed. You can book a demo to get started.", "No free trial is mentioned on the vendor's website."],
@@ -342,7 +345,7 @@ const tools: Tool[] = [
     ],
     pricing: [
       "Pricing isn't publicly listed on the vendor's website. Expect a custom quote.",
-      "Third-party sites (Capterra, Software Advice, TrustRadius, G2) list conflicting figures, so we haven't included a starting price.",
+      "Third-party sites (Capterra, Software Advice, TrustRadius, G2) list conflicting figures, so we haven't included a starting price. Ask Impartner for a quote.",
     ],
     image: "/buyers-guide/salesforce-prm/impartner.webp",
     imageAlt: "Impartner homepage hero reading Welcome to PRM 3.0, with a partner portal dashboard and the Aimi AI assistant",
@@ -355,7 +358,7 @@ const tools: Tool[] = [
     bestFor:
       "Channeltivity is best for mid-market and high-growth B2B tech companies (including manufacturing and hardware) that want a full-featured partner portal deployed quickly, with solid Salesforce and HubSpot integration and without enterprise complexity.",
     intro: [
-      "Channeltivity is a cloud-based PRM for B2B tech companies that want a full partner portal without enterprise complexity. It covers the core channel work, partner recruitment, deal registration, a self-serve partner portal, and performance analytics, and is popular with technology, manufacturing, and hardware companies. Dedicated Salesforce and HubSpot editions make CRM integration one of its strengths.",
+      "Channeltivity is a cloud-based PRM for B2B tech companies that want a full partner portal without enterprise complexity. It covers the core channel work, partner recruitment, deal registration, a self-serve partner portal, and performance analytics, and is popular with technology, manufacturing, and hardware companies. It connects to Salesforce through a managed package and offers a HubSpot edition that connects to HubSpot CRM, which makes CRM integration one of its strengths.",
       "Speed and fit are the biggest differentiators here. The platform is built to scale from a first program (around 100 partners) up to global channel networks.",
     ],
     features: [
@@ -366,7 +369,7 @@ const tools: Tool[] = [
     ],
     pros: [
       "Strong, responsive support.",
-      "A dedicated Salesforce edition, so you can keep Salesforce as your CRM.",
+      "A Salesforce managed package, so you can keep Salesforce as your CRM. Channeltivity's support docs say it requires Salesforce Enterprise or Unlimited Edition.",
       "Configurable in real time, admins can build modules and reports themselves.",
       "Enterprise security: SOC 2, GDPR and a 99.9% uptime SLA.",
     ],
@@ -406,7 +409,7 @@ const tools: Tool[] = [
     pros: [
       "Partners work from tools they already use, which drives higher adoption than a standalone portal.",
       "Two-way sync with both Salesforce and HubSpot.",
-      "Faster setup, most teams launch in days to a few weeks.",
+      "Faster setup. Introw lists an average of under two weeks to go live and says most teams are live within a month.",
       "No-code portal, so changes don't depend on a Salesforce admin.",
     ],
     considerationsLabel: "Things to consider",
@@ -437,14 +440,14 @@ const quickAlternatives = [
   ["Channelscaler", "A PRM and partner program automation platform (formerly Allbound and Channel Mechanics) built for multi-tier ecosystems and indirect revenue models."],
   ["Unifyr", "An AI-native PRM (formerly Zift) that combines partner management, through-channel marketing, and a built-in LMS for established channel programs."],
   ["Impartner", "A dedicated PRM with native Salesforce integration, partner marketing, lead management, and an AI layer, and a pitch built around not requiring Salesforce licenses for portal users."],
-  ["Channeltivity", "A cloud-based PRM for growing B2B tech companies with a self-serve partner portal, deal registration, and dedicated Salesforce and HubSpot editions."],
+  ["Channeltivity", "A cloud-based PRM for growing B2B tech companies with a self-serve partner portal, deal registration, and Salesforce and HubSpot integrations."],
   ["Introw", "A CRM-native PRM that lets partners work from Salesforce, HubSpot, Slack, or email instead of a separate portal, with a no-code portal you can launch quickly."],
 ];
 
 const comparison = [
   ["JazzHQ", "Building a partner program from scratch", "Partner marketplace, program strategy, AI assistant, execution team", "Custom"],
   ["Magentrix", "Enterprise teams with complex CRM environments", "No-code PaaS portal, CRM mirroring (Salesforce, HubSpot, Dynamics), LMS, MDF, AI agent", "From $1,500/mo (Essentials), trial terms unclear"],
-  ["Kiflo", "An affordable first partner program", "Partner management, account mapping, co-selling, commission automation", "From $399/mo (25 partners), 14-day free trial"],
+  ["Kiflo", "An affordable first partner program", "Partner management, account mapping, co-selling, commission automation", "From $399/mo (up to 50 partners), trial or proof of concept available"],
   ["Euler", "AI-automated partner operations", "AI agents for deal registration, partner ops and account management, Partner Directory", "Not published, demo available"],
   ["ZINFI", "Enterprises wanting one full-lifecycle suite", "30 applications across onboarding, enablement, marketing, selling, incentives; optional AI", "From $1,450/mo billed annually, plus setup fee"],
   ["Channelscaler", "Multi-tier enterprise channels", "Deal registration, incentives (rebates, SPIFFs, MDF), tiering, sales-out reporting", "From $50k per module per year"],
@@ -500,7 +503,7 @@ const faqs = [
   },
   {
     q: "How long does it take to implement Salesforce PRM compared to other PRM platforms?",
-    a: "Salesforce doesn't publish a typical implementation timeline, and setup usually involves a Salesforce admin or implementation partner, so the honest answer is that it depends on your org. For comparison, Magentrix says most customers go live in about five weeks, Kiflo says teams are live in under a week, and Introw says most teams launch in days to a few weeks. These are vendor claims, so ask each one for references.",
+    a: "Salesforce doesn't publish a typical implementation timeline, and setup usually involves a Salesforce admin or implementation partner, so the honest answer is that it depends on your org. For comparison, Magentrix says most customers go live in about five weeks, Kiflo says teams are live in under a week, and Introw lists an average of under two weeks to go live. These are vendor claims, so ask each one for references.",
   },
   {
     q: "Which Salesforce PRM alternative is best for enterprise channel programs?",
@@ -699,7 +702,6 @@ export default function SalesforcePrmAlternativesPage() {
 
               {tool.slug === "jazzhq" && <div className={styles.jazzCta}>
                 <p>Find partners, design the program, and run it in one place.</p>
-                <a href="#" className={styles.contextualLink}>Explore JazzHQ <span aria-hidden="true">↗</span></a>
               </div>}
             </section>
           ))}
@@ -777,7 +779,7 @@ export default function SalesforcePrmAlternativesPage() {
             <div className={styles.verdictCopy}>
               <p>When you’re moving away from Salesforce PRM, the right choice comes down to what slowed you down in the first place: setup time, cost, or complexity.</p>
               <p><strong>JazzHQ</strong> is the one to look at first if you’re building a partner program from scratch and need help finding partners, setting up the program, and getting it running.</p>
-              <p>If you want something lighter and faster that stays close to your CRM, <strong>Introw, Kiflo, and Channeltivity</strong> are worth looking at. Introw suits HubSpot and Salesforce teams that want partners working outside a portal, Kiflo suits SaaS teams that want account mapping and co-selling at a published price, and Channeltivity suits mid-market teams that want a structured portal with a dedicated Salesforce edition. <strong>Euler</strong> is worth a look if AI-automated partner operations matter most, as long as it supports your CRM.</p>
+              <p>If you want something lighter and faster that stays close to your CRM, <strong>Introw, Kiflo, and Channeltivity</strong> are worth looking at. Introw suits HubSpot and Salesforce teams that want partners working outside a portal, Kiflo suits SaaS teams that want account mapping and co-selling at a published price, and Channeltivity suits mid-market teams that want a structured portal with a Salesforce managed package. <strong>Euler</strong> is worth a look if AI-automated partner operations matter most, as long as its CRM sync covers your setup.</p>
               <p>For larger, more established channel programs, <strong>Impartner and Magentrix</strong> are the closest to Salesforce PRM in scope while working with your existing CRM, and <strong>ZINFI, Channelscaler, and Unifyr</strong> go further into partner marketing, incentives, enablement, and multi-tier channels.</p>
             </div>
 
@@ -805,7 +807,6 @@ export default function SalesforcePrmAlternativesPage() {
             <div><p className={styles.ctaEyebrow}>BUILD YOUR PARTNER PROGRAM</p>
               <h2 id="guide-cta-title">Find partners, design the program, and run it in one place.</h2>
             </div>
-            <a href="#" className={styles.primaryButton}>Explore JazzHQ <span aria-hidden="true">→</span></a>
           </section>
         </article>
       </div>

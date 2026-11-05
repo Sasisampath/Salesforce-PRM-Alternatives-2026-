@@ -34,14 +34,25 @@ Verified, matches the page:
 - Channeltivity "Growth / Mid-Market / Enterprise" are program stages, not priced plans.
 - Introw: Salesforce not listed on the Pro plan's features; added as a consideration.
 
-## Remaining copy blockers (need editor / vendor confirmation)
-1. **Magentrix free trial**: plan cards say "Try for 1 month", FAQ says "Free trials: No". Page tells readers to confirm.
-2. **Kiflo 14-day free trial**: carried over from approved PartnerStack copy. Kiflo's pricing page only says a trial or proof of concept is available, with no length.
-3. **Kiflo Core "up to 25 partners"**: approved copy says starts at 25, capped at 50. Pricing page says up to 50 active partners and up to 3 partner managers. Confirm wording.
-4. **Impartner pricing**: vendor page blocked automated access; third-party listings conflict, so no number is shown. Needs a quote or manual check of impartner.com/pricing.
-5. **Euler**: no pricing page found; Salesforce sync depth unconfirmed (site names HubSpot only).
-6. **Channeltivity**: "dedicated Salesforce and HubSpot editions" is from approved copy and was not found on the homepage (it lists CRM logos only). Pricing page publishes no prices.
-7. **Introw "days to a few weeks" setup**, **JazzHQ** and **Unifyr** details: reused from approved copy, not independently re-verified.
-8. **Vendor-stated claims** (labelled as such on the page): Magentrix go-live times, ZINFI G2 rating, Impartner "no Salesforce licences for portal users", Euler results/testimonial, Channel Insider cost score.
-9. **Salesforce implementation time**: Salesforce publishes none; the FAQ says so.
-10. Editorial voice ("we"), real "Explore JazzHQ" URLs, author/dates: not supplied.
+## Release-safety pass (release-fix/salesforce-prm-claims)
+Status: article is `noindex` again until claims below are approved. Placeholder `href="#"` CTAs removed (no approved destination exists).
+
+Corrected, with evidence:
+- **Kiflo trial:** removed "14-day free trial". Kiflo's pricing page says a trial or proof of concept is available "to validate specific parts of the product" with no length. Kiflo's compare pages/FAQ (via search results) mention a 14-day trial after a demo. Page now states both, qualified.
+- **Kiflo Core limit:** Core covers up to 50 active partners (price scales with active partners). "25 partners" applies to the *starting point of Plus/Premier*, not Core. Fixed in pricing list and comparison table.
+- **Magentrix trial:** plan cards say "Try for 1 month"; FAQ says "Free trials: No ... (a fee may incur for the trial)". Page now states the conflict and says to confirm.
+- **Euler Salesforce:** integrations page lists Salesforce, HubSpot, Pipedrive and says it syncs partners, opportunities and attribution data with Salesforce. Homepage names only HubSpot. Depth (e.g. custom objects) still unconfirmed.
+- **Channeltivity CRM:** support docs describe a Salesforce *managed package* (requires Salesforce Enterprise or Unlimited, not Professional) and a HubSpot edition (announced 2019) that connects to HubSpot CRM. "Dedicated editions" wording replaced.
+- **Introw timing:** Introw lists an average of under two weeks to go live, most teams live within a month, portal setup possible "in minutes". Replaced "days to a few weeks".
+- **Impartner pricing:** still unpublished and third-party figures conflict; page states this and says to request a quote.
+
+## Remaining editorial blockers
+1. Impartner and Euler actual pricing (no public source).
+2. Kiflo trial: confirm current length/terms directly with Kiflo (sources disagree on whether a 14-day trial exists and when it applies).
+3. Magentrix trial terms (page contradicts itself).
+4. Euler Salesforce sync depth; Channeltivity HubSpot edition current packaging (source is a 2019 announcement).
+5. JazzHQ and Unifyr details (reused approved copy, not re-verified); Introw features beyond timing.
+6. Vendor self-reported claims (Magentrix go-live, ZINFI G2 rating, Impartner "no Salesforce licences", Euler results, Channel Insider cost score).
+7. Real "Explore JazzHQ" destination (CTAs currently omitted), author/dates, editorial voice.
+8. Production domain for canonical/OG URLs (see below).
+9. PartnerStack article (separate, approved page) still carries the same unverified Kiflo "14-day / up to 25 partners" lines; not changed here.
